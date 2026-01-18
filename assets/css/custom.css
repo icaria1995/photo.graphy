@@ -1,164 +1,415 @@
-/* --- 1. FONTS (Always the same) --- */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap');
+/* Importing Thinner Weights (100, 200, 300) along with the standard ones */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600;800&family=Inter:wght@300;400&display=swap');
 
-/* --- 2. GLOBAL FONTS --- */
-html, body {
-    font-family: 'Source Sans 3', sans-serif !important;
+:root {
+    --font-identity: 'Montserrat', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --accent-color: #3b82f6;
+    --glass-bg: rgba(255, 255, 255, 0.85);
+    --glass-border: rgba(0, 0, 0, 0.05);
 }
 
-h1, h2, h3, h4, h5, h6, .logo {
-    font-family: 'Montserrat', sans-serif !important;
-    letter-spacing: -0.02em;
+/* 2. Global Polish */
+body {
+    font-family: var(--font-body);
+    letter-spacing: -0.01em;
+    /* Smooth scrolling for the whole page */
+    scroll-behavior: smooth; 
 }
 
-/* --- 3. DARK MODE (Academic Noir) --- */
-/* These colors apply ONLY when the computer asks for Dark Mode */
+/* 3. The "Museum" Typography Style */
+h2, h3, .site-title, .navbar-item {
+    font-family: var(--font-identity);
+    letter-spacing: 0.24em;    /* W I D E   S P A C I N G */
+    font-weight: 400;          /* Not too bold, just right */
+}
+
+h1 {
+    font-family: var(--font-identity);
+    font-weight: 100 !important;          /* Extra bold looks best stretched */
+    text-transform: uppercase;
+    line-height: 0.8;          /* Tighten it so it doesn't look floaty */
+    letter-spacing: 1em;
+    text-align: center;
+    width: 200%;
+}
+/* THE "NUCLEAR" OVERRIDE for the Top-Left Title */
+/* We target the ID, the class, and the generic link inside nav */
+#site-title, 
+.site-title, 
+.navbar-brand, 
+.navbar-item.brand,
+nav .navbar-item:first-child, /* Catch the first item (usually the logo) */
+a[href="/"]       /* Catch the home link specifically */
+{
+    font-family: var(--font-identity) !important; /* Force it */
+    font-weight: 200 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.2em !important;
+    font-size: 1em !important; /* Adjust if it looks too small/big */
+    opacity: 1 !important;
+}
+/* 4. Glassmorphism Navbar (If your theme supports fixed nav) */
+nav, .navbar {
+    backdrop-filter: blur(12px); /* The "Frosted Glass" effect */
+    -webkit-backdrop-filter: blur(12px);
+    background-color: var(--glass-bg);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+/* =========================================
+   DARK MODE FOR GLASS NAVBAR
+   ========================================= */
+
+@media (prefers-color-scheme: dark) {
+    
+    /* 1. Tint the Header Black */
+    nav, header {
+        /* Dark grey with 85% opacity */
+        background-color: rgba(17, 17, 17, 0.85) !important; 
+        
+        /* Subtle white border so it pops against the content */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+        
+        /* Ensure all text inside turns white */
+        color: #e5e5e5 !important;
+    }
+
+    /* 2. Fix the Menu Button (The Burger) */
+    .btn.btn-square {
+        color: #e5e5e5 !important; /* Force icon to be white */
+    }
+
+    /* 3. Fix the "Jungu Kang" Title Link */
+    header a {
+        color: #e5e5e5 !important;
+    }
+
+    /* 4. Update the Pills for Dark Mode */
+    .nav-pill {
+        border-color: rgba(255, 255, 255, 0.2);
+        color: #e5e5e5;
+    }
+    
+    /* Hover state in Dark Mode */
+    .nav-pill:hover {
+        background-color: #e5e5e5;
+        color: #000; /* Invert text to black on hover */
+    }
+    
+    /* Keep Instagram Pink even in Dark Mode */
+    .insta-pill:hover {
+        background-color: #E1306C;
+        color: white;
+        border-color: #E1306C;
+    }
+}
+
+/* 5. Subtle "Breathing" Photo Hover */
+.gallery-item img {
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+                filter 0.4s ease;
+    will-change: transform;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.02); /* Very subtle zoom */
+    filter: brightness(1.05); /* Slight "glow" on active photo */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1); /* Lift it off the page */
+}
+
+/* 6. The "Research" Button - Refined */
+a[href="https://jungukang.com"] {
+    font-family: var(--font-identity);
+    font-size: 0.75em;
+    padding: 6px 16px;
+    letter-spacing: 0.1em;
+    border: 1px solid currentColor;
+    border-radius: 2px; /* Sharper corners = more "Architecural" */
+    transition: all 0.3s ease;
+}
+
+a[href="https://jungukang.com"]:hover {
+    background-color: black;
+    color: white;
+    border-color: black;
+    transform: translateY(-2px); /* Little hop */
+}
+
+/* 7. Dark Mode Adjustments */
 @media (prefers-color-scheme: dark) {
     :root {
-        --color-background: #111;       /* Your deep black */
-        --color-text: #eee;             /* Soft white */
-        --color-primary: #eee;          /* Links */
-        --color-secondary: #aaa;        /* Captions */
+        --glass-bg: rgba(17, 17, 17, 0.8); /* Dark glass */
+        --glass-border: rgba(255, 255, 255, 0.1);
+    }
+    body {
+        background-color: #111111;
+        color: #e5e5e5;
+    }
+    a[href="https://jungukang.com"]:hover {
+        background-color: white;
+        color: black;
+        border-color: white;
     }
 }
 
-/* --- 4. LIGHT MODE (Clean Paper) --- */
-/* These colors apply ONLY when the computer asks for Light Mode */
-@media (prefers-color-scheme: light) {
-    :root {
-        --color-background: #ffffff;    /* Pure white */
-        --color-text: #1f1f1f;          /* Dark grey text */
-        --color-primary: #111;          /* Black links */
-        --color-secondary: #555;        /* Grey captions */
-    }
+/* 8. Entry Animation (Fade in everything gently) */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-/* --- 5. STYLISH MONTH HEADERS --- */
-/* This targets the Month headers inside the gallery content */
-.prose h2 {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    margin-top: 3rem; /* Space above the month */
-    margin-bottom: 1.5rem;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem;
-    color: var(--color-text);
+.gallery-item {
+    animation: fadeInUp 0.8s ease backwards;
 }
 
-/* The magic horizontal line */
-.prose h2::after {
-    content: '';
-    flex: 1;           /* Take up remaining space */
-    margin-left: 15px; /* Space between text and line */
-    height: 1px;       /* Thickness of line */
-    background-color: rgba(255,255,255,0.2); /* Subtle divider color */
-}
+/* Stagger the animation for the first 10 items (Cascading effect) */
+.gallery-item:nth-child(1) { animation-delay: 0.1s; }
+.gallery-item:nth-child(2) { animation-delay: 0.15s; }
+.gallery-item:nth-child(3) { animation-delay: 0.2s; }
+.gallery-item:nth-child(4) { animation-delay: 0.25s; }
+.gallery-item:nth-child(5) { animation-delay: 0.3s; }
 
-/* --- 6. MANUAL GALLERY GRID --- */
-.gallery-section {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 1.5rem;
-    margin-bottom: 3rem;
-}
 
-.gallery-item img {
-    width: 100%;
-    height: 250px;       /* Forces uniform square-ish tiles */
-    object-fit: cover;   /* Crops image to fill the square */
-    border-radius: 8px;
-    transition: transform 0.2s ease;
-}
-
-.gallery-item img:hover {
-    transform: scale(1.02);
-    cursor: pointer;
-}
-
-/* --- 7. THE MUSEUM LAYOUT (Margins & Lines) --- */
-/* We target the main container */
-main {
-    /* Limit the width for readability */
-    max-width: 1400px; 
-    margin: 0 auto; /* Center the box */
+/* 1. Make the Header Sticky & Glassy */
+nav, header {
+    position: sticky !important;       /* The "Sticky" magic */
+    top: 0;                 /* Stick to the very top */
+    z-index: 1000;          /* Stay above photos */
     
-    /* The Vertical Lines */
-    border-left: 2px solid rgba(255, 255, 255, 0.1);
-    border-right: 2px solid rgba(255, 255, 255, 0.1);
-    
-    /* Internal breathing room so photos don't touch the lines */
-    padding: 40px 60px; 
-    
-    /* Ensure lines stretch the full height even on short pages */
-    min-height: 100vh;
-}
-
-/* On Mobile, we remove the strict borders to use full screen */
-@media (max-width: 768px) {
-    main {
-        border: none;
-        padding: 20px;
-        max-width: 100%;
-    }
-}
-
-/* --- 8. SUPER GLUE STICKY HEADER --- */
-/* Target the element directly (header) AND the class (.header) */
-header, .header {
-    position: -webkit-sticky; /* For Safari */
-    position: sticky;
-    top: 0;
-    width: 100%;              /* Ensure it spans the full width */
-    z-index: 9999;            /* Force it above EVERYTHING */
-    
-    /* The Visuals */
-    background-color: rgba(17, 17, 17, 0.9) !important; /* Darker & clearer */
+    /* Glass Effect */
+    background-color: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
     
-    /* Fix for some themes where padding gets squished */
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-/* --- 10. CENTERED HEADER TITLE --- */
-/* First, ensure the header can act as an anchor */
-.header {
-    position: sticky; /* Keep your sticky setting */
+    /* Layout Alignment */
     display: flex;
-    justify-content: space-between; /* Pushes menu to the right */
+    justify-content: space-between; /* Title left, Buttons right */
     align-items: center;
-    position: relative; /* Crucial for the centering trick */
+    padding: 10px 20px;
 }
 
-/* Now, grab the logo/title and force it to the center */
-.header .logo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%); /* Shifts it back by half its own width */
-    
-    /* Ensure it sits nicely */
-    width: auto;
-    text-align: center;
-    white-space: nowrap;
-    z-index: 10; /* Keep it above background */
+/* 2. Container for your new Pills */
+.sticky-pills {
+    display: flex;
+    align-items: center;
+    gap: 10px;          /* Space between buttons */
+    margin-right: 15px; /* Space between Pills and the "Menu" button */
+    margin-left: auto;  /* Push everything to the right */
 }
 
-/* --- 11. FIXED DROPDOWN MENU --- */
-/* Target the menu container when it's open */
-.menu-container, #menu {
-    /* Force it to stick to the screen, not the page */
-    position: fixed !important; 
+/* 3. Style the Pills */
+.nav-pill {
+    font-family: var(--font-identity);
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    color: rgb(255, 255, 255);
+    background-color: rgb(18, 18, 18);
+    padding: 6px 16px;
+    border-radius: 4px;
+    border: 1px solid currentColor;
+    transition: all 0.4s ease;
     
-    /* Position it just below your sticky header */
-    top: 60px !important; /* Adjust this number to match your header height */
+    display: flex;
+    align-items: center;
+    line-height: 1;
+}
+
+/* 4. Hover Effects */
+.nav-pill:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: rgb(255, 255, 255);
+    transform: translateY(-1px);
+}
+
+/* Instagram Specific Hover */
+.insta-pill:hover {
+    background-color: #E1306C; /* Insta Pink */
+    border-color: #E1306C;
+}
+
+/* 5. Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    nav, header {
+        background-color: rgba(252, 252, 252, 0.85);
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* 6. Mobile Tweak */
+/* If the screen is TOO small, maybe show only the icons or hide 'Research' text */
+@media (max-width: 400px) {
+    .nav-pill {
+        padding: 6px; /* Shrink to circle/square */
+    }
+    .nav-pill span {
+        display: none; /* Hide text on tiny screens if needed */
+    }
+}
+
+/* =========================================
+   HEADER ALIGNMENT FIX
+   ========================================= */
+
+/* 1. Force the parent list to align everything to center */
+header ul {
+    display: flex !important;
+    align-items: center !important; /* The Magic Wand */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 100%; /* Ensure it fills the bar */
+}
+
+/* 2. Reset the list items so they don't drag things down */
+header ul li {
+    display: flex;
+    align-items: center;
+    height: auto;
+    margin: 0;
+}
+
+/* 3. Specific gap control */
+/* This controls the space between the [Pills] and the [Menu] */
+.pills-container {
+    margin-right: 12px; 
+}
+
+/* 4. Fine-tune the Pills text alignment */
+/* Sometimes the text sits 1px too low in pills. This fixes that. */
+.nav-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1; 
+    height: 32px; /* Set a fixed height if they still look jittery */
+}
+
+
+/* =========================================
+   GALLERY BREATHING ROOM (Wide Screens)
+   ========================================= */
+
+/* Only apply this when the screen is wider than a tablet (1024px) */
+@media (min-width: 1024px) {
+    .gallery {
+        /* 1. Stop it from stretching to infinity */
+        max-width: 1600px; 
+        
+        /* 2. Center the gallery block in the middle of the screen */
+        margin-left: auto;
+        margin-right: auto;
+        
+        /* 3. Add nice thick gutters on the sides */
+        padding-left: 6vw;  /* 6% of viewport width */
+        padding-right: 6vw;
+    }
+}
+
+/* For MASSIVE screens (like 4K), constrain it even more */
+@media (min-width: 1920px) {
+    .gallery {
+        max-width: 1800px;
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+}
+
+/* =========================================
+   THE CINEMATIC GRAIN OVERLAY
+   ========================================= */
+
+/* 1. The Grain Texture */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
     left: 0;
     width: 100%;
+    height: 100%;
+    pointer-events: none; /* Let clicks pass through */
+    z-index: 9000;        /* Sit on top of everything */
     
-    /* ensure it's visible */
-    z-index: 9998; 
-    background-color: rgba(17, 17, 17, 0.95); /* Match your sticky header color */
-    backdrop-filter: blur(12px);
+    /* The Noise Generator */
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='1'/%3E%3C/svg%3E");
+    
+    /* Blending Mode */
+    opacity: 0.05; /* Very subtle (Adjust to 0.08 for more grit) */
+    mix-blend-mode: overlay;
+}
+
+/* 2. Custom Text Selection (The Cherry on Top) */
+/* When people highlight your name, it turns your brand color */
+::selection {
+    background: var(--accent-color); /* Your Blue */
+    color: white;
+}
+
+/* =========================================
+   THE "DIFFERENCE" CURSOR
+   ========================================= */
+
+/* 1. Hide the default mouse arrow (Optional - daring!) */
+/* body { cursor: none; } */  
+/* I recommend keeping the arrow visible for now until you get used to it */
+
+#cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    
+    background-color: white; 
+    border-radius: 50%;
+    
+    /* THE MAGIC: Inverts colors behind it */
+    mix-blend-mode: difference; 
+    
+    pointer-events: none; /* Let clicks pass through it */
+    z-index: 9999;
+    
+    /* Center the div on the mouse tip */
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease, height 0.3s ease, transform 0.1s ease;
+}
+
+/* 2. State: Hovering over a link/photo */
+#cursor.hovered {
+    width: 50px;  /* Grow larger */
+    height: 50px;
+    background-color: white; /* Keep it solid white for max contrast */
+}
+
+/* 3. Disable on Mobile (Touch screens don't have cursors) */
+@media (max-width: 1024px) {
+    #cursor {
+        display: none;
+    }
+}
+
+/* =========================================
+   HIDE SYSTEM CURSOR (Desktop Only)
+   ========================================= */
+
+@media (min-width: 1024px) {
+    /* 1. Hide the arrow globally */
+    body, 
+    html {
+        cursor: none;
+    }
+
+    /* 2. Hide the "Pointer Hand" on links/buttons */
+    a, 
+    button, 
+    input, 
+    textarea,
+    .gallery-item,
+    .nav-pill {
+        cursor: none !important; /* Force the ghost to stay */
+    }
 }

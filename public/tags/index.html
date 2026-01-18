@@ -3,32 +3,33 @@
   <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tags - Jungu Kang || photo.graphy</title>
+  <title>Tags - Jungu Kang</title>
   <link rel="canonical" href="http://localhost:1313/tags/" />
   <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
   <link rel="icon" type="image/png" href="/images/favicon.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
-  <meta name="description" content="One Photo One Day" />
+  <meta name="description" content="Linguist / Photographer" />
   
   
     <meta name="robots" content="index, follow" />
   
-  <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/tags/index.xml" title="Jungu Kang || photo.graphy" />
+  <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/tags/index.xml" title="Jungu Kang" />
   <meta property="og:url" content="http://localhost:1313/tags/" />
-  <meta property="og:site_name" content="Jungu Kang || photo.graphy" />
+  <meta property="og:site_name" content="Jungu Kang" />
   <meta property="og:title" content="Tags" />
-  <meta property="og:description" content="One Photo One Day" />
+  <meta property="og:description" content="Linguist / Photographer" />
   <meta property="og:locale" content="en_us" />
   <meta property="og:type" content="website" />
 
 
   
-  <link rel="stylesheet" href="/css/main.min.131bcd9d6972a10535203986222fe7adec81325389071e04beb29161588d4907.css" />
+  <link rel="stylesheet" href="/css/main.min.45be4c9bc0cab34a3643c91ea7e9fc01c5d4ac8bd26c9d665f5352d572ee4c11.css" />
   
   
   <script src="/js/main.0de0d73fb334e8aef574046cb537325b517c7abcd818150338b9a53e8d3b8dc2.js" defer></script></head>
 
   <body>
+    <div id="cursor"></div>
     <header>
   
     <a class="btn btn-square" href="/" title="photo.graphy">
@@ -39,6 +40,14 @@
   
   
     <ul>
+        <li class="pills-container">
+          <div class="sticky-pills">
+              <a href="https://jungukang.com" target="_blank" class="nav-pill">lɪŋ</a>
+              <a href="https://instagram.com/jungurugu" target="_blank" class="nav-pill insta-pill">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+              </a>
+          </div>
+      </li>
       <li>
         <button class="btn btn-square" id="menu-toggle" aria-expanded="false" type="button" title="Menu">
           <svg class="icon-menu" width="24" height="24" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -57,31 +66,37 @@
     
       <li itemscope itemtype="http://www.schema.org/SiteNavigationElement">
         <a aria-current="false" href="/about" itemprop="url">
-          <span itemprop="name">about</span>
+          <span itemprop="name">About</span>
+        </a>
+      </li>
+    
+      <li itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+        <a aria-current="false" href="/ucsc/" itemprop="url">
+          <span itemprop="name">UCSC</span>
         </a>
       </li>
     
       <li itemscope itemtype="http://www.schema.org/SiteNavigationElement">
         <a aria-current="false" href="/2024-1p1d" itemprop="url">
-          <span itemprop="name">1p1d.2024</span>
+          <span itemprop="name">2024</span>
         </a>
       </li>
     
       <li itemscope itemtype="http://www.schema.org/SiteNavigationElement">
         <a aria-current="false" href="/2025-1p1d" itemprop="url">
-          <span itemprop="name">1p1d.2025</span>
+          <span itemprop="name">2025</span>
         </a>
       </li>
     
       <li itemscope itemtype="http://www.schema.org/SiteNavigationElement">
-        <a aria-current="false" href="/2025-1p1d" itemprop="url">
-          <span itemprop="name">1p1d.2026</span>
+        <a aria-current="false" href="/gear" itemprop="url">
+          <span itemprop="name">Gear</span>
         </a>
       </li>
     
       <li itemscope itemtype="http://www.schema.org/SiteNavigationElement">
-        <a aria-current="false" href="https://jungukang.win" itemprop="url">
-          <span itemprop="name">back to research →</span>
+        <a aria-current="false" href="https://www.jungukang.com" itemprop="url">
+          <span itemprop="name">Back to Main</span>
         </a>
       </li>
     
@@ -112,5 +127,47 @@
   </section>
 </footer>
 
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script> 
+<script>
+
+    const cursor = document.getElementById('cursor');
+    
+    
+    document.addEventListener('mousemove', (e) => {
+        
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+    });
+
+    
+    const links = document.querySelectorAll('a, button, .gallery-item');
+    links.forEach(link => {
+        link.addEventListener('mouseenter', () => {
+            cursor.classList.add('hovered');
+        });
+        link.addEventListener('mouseleave', () => {
+            cursor.classList.remove('hovered');
+        });
+    });
+
+  
+  const lenis = new Lenis({
+    duration: 1.2,    
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
+    direction: 'vertical', 
+    gestureDirection: 'vertical',
+    smooth: true,
+    mouseMultiplier: 1,
+    smoothTouch: false, 
+    touchMultiplier: 2,
+  });
+
+  
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+  requestAnimationFrame(raf);
+</script>
   </body>
 </html>

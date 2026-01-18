@@ -8,4 +8,4 @@ My longstanding project is "One Photo One Day." which started as a part of my 20
 
 These are the highs (and lows) of my everyday photographs.
 
-[Back to Research](https://jungukang.win)
+[Back to Research](https://jungukang.com)

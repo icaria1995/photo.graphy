@@ -3,10 +3,53 @@
 <html class="{{- if (eq $theme "light") -}}light{{- else if (eq $theme "dark") }}dark{{ end }}" lang="{{- site.LanguageCode | default "en" -}}">
   {{ partial "head.html" . }}
   <body>
+    <div id="cursor"></div>
     {{ block "header" . }}{{ partial "header.html" . }}{{ end }}
     <main>
       {{ block "main" . }}{{ end }}
     </main>
     {{ block "footer" . }}{{ partialCached "footer.html" . }}{{ end }}
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script> 
+<script>
+// CURSOR LOGIC
+    const cursor = document.getElementById('cursor');
+    
+    // 1. Move the cursor
+    document.addEventListener('mousemove', (e) => {
+        // slight delay for that "organic" feel
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+    });
+
+    // 2. Hover Effects (Expand when over links)
+    const links = document.querySelectorAll('a, button, .gallery-item');
+    links.forEach(link => {
+        link.addEventListener('mouseenter', () => {
+            cursor.classList.add('hovered');
+        });
+        link.addEventListener('mouseleave', () => {
+            cursor.classList.remove('hovered');
+        });
+    });
+
+  // Initialize Smooth Scroll
+  const lenis = new Lenis({
+    duration: 1.2,    // How "heavy" the scroll feels
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Physics math
+    direction: 'vertical', 
+    gestureDirection: 'vertical',
+    smooth: true,
+    mouseMultiplier: 1,
+    smoothTouch: false, // Keep mobile native (better for UX)
+    touchMultiplier: 2,
+  });
+
+  // The Animation Loop
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+  requestAnimationFrame(raf);
+</script>
   </body>
 </html>

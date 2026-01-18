@@ -1,28 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>photo.graphy on Jungu Kang || photo.graphy</title>
+    <title>photo.graphy on Jungu Kang</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content in photo.graphy on Jungu Kang || photo.graphy</description>
+    <description>Recent content in photo.graphy on Jungu Kang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <managingEditor>jkang@ucsc.edu (Jungu Kang)</managingEditor>
-    <webMaster>jkang@ucsc.edu (Jungu Kang)</webMaster>
     <lastBuildDate>Sat, 17 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>1p1d.2024</title>
       <link>http://localhost:1313/2024-1p1d/</link>
-      <pubDate>Sat, 17 Jan 2026 00:00:00 +0000</pubDate><author>jkang@ucsc.edu (Jungu Kang)</author>
+      <pubDate>Sat, 17 Jan 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/2024-1p1d/</guid>
-        <media:content url="http://localhost:1313/2024-1p1d/1p1d2024Cover_hu_835b79a5bc9fef2a.jpg" type="image/jpeg"/>
+        <media:content url="http://localhost:1313/2024-1p1d/1p1d2024Cover2_hu_1ac51ff677cc66c1.jpg" type="image/jpeg"/>
         <description>
-          &lt;img src=&quot;http://localhost:1313/2024-1p1d/1p1d2024Cover_hu_835b79a5bc9fef2a.jpg&quot; /&gt;
+          &lt;img src=&quot;http://localhost:1313/2024-1p1d/1p1d2024Cover2_hu_1ac51ff677cc66c1.jpg&quot; /&gt;
           &lt;p&gt;One Photo One Day: The first year&lt;/p&gt;
         </description></item>
     <item>
       <title>1p1d.2025</title>
       <link>http://localhost:1313/2025-1p1d/</link>
-      <pubDate>Sat, 17 Jan 2026 00:00:00 +0000</pubDate><author>jkang@ucsc.edu (Jungu Kang)</author>
+      <pubDate>Sat, 17 Jan 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/2025-1p1d/</guid>
         <media:content url="http://localhost:1313/2025-1p1d/10-18_hu_2d0d98cbc3d8fdb9.jpg" type="image/jpeg"/>
         <description>
@@ -31,18 +29,118 @@
         </description></item>
     <item>
       <title>1p1d.bests.2024</title>
-      <link>http://localhost:1313/2024-1p1d-bests/</link>
-      <pubDate>Sat, 17 Jan 2026 00:00:00 +0000</pubDate><author>jkang@ucsc.edu (Jungu Kang)</author>
-      <guid>http://localhost:1313/2024-1p1d-bests/</guid>
-        <media:content url="http://localhost:1313/2024-1p1d-bests/2024Best_09_hu_c02552512c743c06.jpg" type="image/jpeg"/>
+      <link>http://localhost:1313/2024-1p1d-best/</link>
+      <pubDate>Sat, 17 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/2024-1p1d-best/</guid>
+        <media:content url="http://localhost:1313/2024-1p1d-best/2024Best_09_2_hu_f85cad8d8605dbb6.jpg" type="image/jpeg"/>
         <description>
-          &lt;img src=&quot;http://localhost:1313/2024-1p1d-bests/2024Best_09_hu_c02552512c743c06.jpg&quot; /&gt;
+          &lt;img src=&quot;http://localhost:1313/2024-1p1d-best/2024Best_09_2_hu_f85cad8d8605dbb6.jpg&quot; /&gt;
           &lt;p&gt;One Photo One Day 2024 selection&lt;/p&gt;
+        </description></item>
+    <item>
+      <title>1p1d.covers.2024</title>
+      <link>http://localhost:1313/2024-1p1d-cover/</link>
+      <pubDate>Sat, 17 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/2024-1p1d-cover/</guid>
+        <media:content url="http://localhost:1313/2024-1p1d-cover/001_1P1D_thumb_janu_1.0_hu_968451f3d8e48fcd.jpg" type="image/jpeg"/>
+        <description>
+          &lt;img src=&quot;http://localhost:1313/2024-1p1d-cover/001_1P1D_thumb_janu_1.0_hu_968451f3d8e48fcd.jpg&quot; /&gt;
+          &lt;p&gt;Cover design for each Insta uploads for 1P1D&lt;/p&gt;
+        </description></item>
+    <item>
+      <title>1p1d.covers.2025</title>
+      <link>http://localhost:1313/2025-1p1d-cover/</link>
+      <pubDate>Sat, 17 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/2025-1p1d-cover/</guid>
+        <media:content url="http://localhost:1313/2025-1p1d-cover/079_1P1D_2025_thumb_jan_1.0_hu_32379cb7f99b7287.jpg" type="image/jpeg"/>
+        <description>
+          &lt;img src=&quot;http://localhost:1313/2025-1p1d-cover/079_1P1D_2025_thumb_jan_1.0_hu_32379cb7f99b7287.jpg&quot; /&gt;
+          &lt;p&gt;Cover design for each Insta uploads for 1P1D&lt;/p&gt;
+        </description></item>
+    <item>
+      <title>ucsc.elena.2025</title>
+      <link>http://localhost:1313/ucsc/elena-visit/</link>
+      <pubDate>Sat, 17 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ucsc/elena-visit/</guid>
+        <media:content url="http://localhost:1313/ucsc/elena-visit/2025elena_08a_hu_c3c636bcc04a84f7.jpg" type="image/jpeg"/>
+        <description>
+          &lt;img src=&quot;http://localhost:1313/ucsc/elena-visit/2025elena_08a_hu_c3c636bcc04a84f7.jpg&quot; /&gt;
+          &lt;p&gt;Photos from Ling colloquim by Elena&lt;/p&gt;
+        </description></item>
+    <item>
+      <title>ucsc.elsiKaiser.2025</title>
+      <link>http://localhost:1313/ucsc/2025-elsi-kaiser/</link>
+      <pubDate>Sat, 17 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ucsc/2025-elsi-kaiser/</guid>
+        <media:content url="http://localhost:1313/ucsc/2025-elsi-kaiser/elsiKaiser_main_hu_f6c54b057c92ea33.jpg" type="image/jpeg"/>
+        <description>
+          &lt;img src=&quot;http://localhost:1313/ucsc/2025-elsi-kaiser/elsiKaiser_main_hu_f6c54b057c92ea33.jpg&quot; /&gt;
+          &lt;p&gt;Photos from a ling colloquim by Elsi Kaiser 2025.&lt;/p&gt;
+        </description></item>
+    <item>
+      <title>ucsc.fallWelcome.2025</title>
+      <link>http://localhost:1313/ucsc/2025-fall-welcome/</link>
+      <pubDate>Sat, 17 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ucsc/2025-fall-welcome/</guid>
+        <media:content url="http://localhost:1313/ucsc/2025-fall-welcome/fallWelcome_Main_hu_9a4586d3c2ce21e.jpg" type="image/jpeg"/>
+        <description>
+          &lt;img src=&quot;http://localhost:1313/ucsc/2025-fall-welcome/fallWelcome_Main_hu_9a4586d3c2ce21e.jpg&quot; /&gt;
+          &lt;p&gt;Photos from Fall Welcome event in 2025&lt;/p&gt;
+        </description></item>
+    <item>
+      <title>ucsc.lurc.2025</title>
+      <link>http://localhost:1313/ucsc/2025-lurc/</link>
+      <pubDate>Sat, 17 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ucsc/2025-lurc/</guid>
+        <media:content url="http://localhost:1313/ucsc/2025-lurc/2025lurc_main_hu_f8b4d5b09c0cb767.jpg" type="image/jpeg"/>
+        <description>
+          &lt;img src=&quot;http://localhost:1313/ucsc/2025-lurc/2025lurc_main_hu_f8b4d5b09c0cb767.jpg&quot; /&gt;
+          &lt;p&gt;Photos from LURC 2025&lt;/p&gt;
+        </description></item>
+    <item>
+      <title>ucsc.mykeBrinkerhoff.2025</title>
+      <link>http://localhost:1313/ucsc/myke-defence-20250608/</link>
+      <pubDate>Sat, 17 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ucsc/myke-defence-20250608/</guid>
+        <media:content url="http://localhost:1313/ucsc/myke-defence-20250608/mykeBrinkerhoffDefense_main_hu_f7871803838e1412.jpg" type="image/jpeg"/>
+        <description>
+          &lt;img src=&quot;http://localhost:1313/ucsc/myke-defence-20250608/mykeBrinkerhoffDefense_main_hu_f7871803838e1412.jpg&quot; /&gt;
+          &lt;p&gt;Photos from Myke Brinkerhoff&#39;s PhD dissertation defense&lt;/p&gt;
+        </description></item>
+    <item>
+      <title>ucsc.ss.2025</title>
+      <link>http://localhost:1313/ucsc/2025-spring-symposium/</link>
+      <pubDate>Sat, 17 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ucsc/2025-spring-symposium/</guid>
+        <media:content url="http://localhost:1313/ucsc/2025-spring-symposium/2025SS_06_hu_8c18a4dee6099439.jpg" type="image/jpeg"/>
+        <description>
+          &lt;img src=&quot;http://localhost:1313/ucsc/2025-spring-symposium/2025SS_06_hu_8c18a4dee6099439.jpg&quot; /&gt;
+          &lt;p&gt;Photos from 2025 Spring Research Symposium.&lt;/p&gt;
+        </description></item>
+    <item>
+      <title>ucsc.yaqingCao.2025</title>
+      <link>http://localhost:1313/ucsc/yaqing-defence-20250611/</link>
+      <pubDate>Sat, 17 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ucsc/yaqing-defence-20250611/</guid>
+        <media:content url="http://localhost:1313/ucsc/yaqing-defence-20250611/yaqing_main_hu_3ccbece156ba564a.jpg" type="image/jpeg"/>
+        <description>
+          &lt;img src=&quot;http://localhost:1313/ucsc/yaqing-defence-20250611/yaqing_main_hu_3ccbece156ba564a.jpg&quot; /&gt;
+          &lt;p&gt;Photos from Yaqing Cao&#39;s PhD dissertation defense&lt;/p&gt;
+        </description></item>
+    <item>
+      <title>ucsc.yearEnd.2025</title>
+      <link>http://localhost:1313/ucsc/2025-year-end-party-20250612/</link>
+      <pubDate>Sat, 17 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ucsc/2025-year-end-party-20250612/</guid>
+        <media:content url="http://localhost:1313/ucsc/2025-year-end-party-20250612/2025yearEnd_main_hu_e5c5592c113d0e1d.jpg" type="image/jpeg"/>
+        <description>
+          &lt;img src=&quot;http://localhost:1313/ucsc/2025-year-end-party-20250612/2025yearEnd_main_hu_e5c5592c113d0e1d.jpg&quot; /&gt;
+          &lt;p&gt;Photos from year-end party of UCSC Ling, 2025.&lt;/p&gt;
         </description></item>
     <item>
       <title>about.me</title>
       <link>http://localhost:1313/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>jkang@ucsc.edu (Jungu Kang)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/about/</guid><description>&lt;no value&gt;</description></item>
   </channel>
 </rss>

@@ -1,31 +1,54 @@
-baseURL: "https://photos.jungukang.win/"
+baseURL: "https://photos.jungukang.com/"
 languageCode: "en-us"
-title: "Jungu Kang || photo.graphy"
+title: "Jungu Kang"
 theme: "gallery"
 
+# "Pro" Navigation Structure
 menu:
   main:
-    - name: about
+    - name: About
       url: /about
       weight: 1
-    - name: 1p1d.2024
-      url: /2024 1P1D
+    # Renamed links to remove spaces (Cleaner URLs)
+    - name: 2024
+      url: /2024-1p1d
       weight: 2
-    - name: 1p1d.2025
-      url: /2025 1P1D
+    - name: 2025
+      url: /2025-1p1d
       weight: 3
-    - name: 1p1d.2026
-      url: /2025 1P1D
+    # Added a "Gear" page (Very common for photographer portfolios)
+    - name: Gear
+      url: /gear
       weight: 4
-    - name: back to research →
-      url: https://jungukang.win
+    - name: Back to Main
+      url: https://www.jungukang.com
       weight: 5
 
 params:
-  author:
-    name: "Jungu Kang"
-    email: "jkang@ucsc.edu"
-  description: "One Photo One Day"
+  name: "Jungu Kang"
+  description: "Linguist / Photographer"
+  
+  # THE "PRO" UPGRADE: Show your camera settings
+  # This automatically reads the metadata from your images
+  showExif: true
+  showDate: true
+  
+  # Modern "Masonry" Layout (Interlocking grid)
+  layout: masonry 
+  
+  # Social Links (Clean icon display)
+  social:
+    - name: instagram
+      url: "https://instagram.com/jungurugu"
+    - name: github
+      url: "https://github.com/icaria1995"
+    - name: email
+      url: "mailto:jkang@ucsc.edu"
+
+  # Link to your custom CSS for the visual polish
   customCSS: ["css/custom.css"]
-  # Visual Settings
-  style: auto     # Adapts to system (Dark/Light)
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true # Allows custom HTML in "About" page
