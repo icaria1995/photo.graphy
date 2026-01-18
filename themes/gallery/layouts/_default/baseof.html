@@ -12,25 +12,27 @@
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script> 
 <script>
 // CURSOR LOGIC
+// 1. Move the cursor
     const cursor = document.getElementById('cursor');
     
-    // 1. Move the cursor
-    document.addEventListener('mousemove', (e) => {
-        // slight delay for that "organic" feel
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
-    });
+    // Safety check: only run if the cursor div actually exists
+    if (cursor) {
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
 
-    // 2. Hover Effects (Expand when over links)
-    const links = document.querySelectorAll('a, button, .gallery-item');
-    links.forEach(link => {
-        link.addEventListener('mouseenter', () => {
-            cursor.classList.add('hovered');
+        // 2. Hover Effects (Expand when over links)
+        const links = document.querySelectorAll('a, button, .gallery-item, .nav-pill');
+        links.forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                cursor.classList.add('hovered');
+            });
+            link.addEventListener('mouseleave', () => {
+                cursor.classList.remove('hovered');
+            });
         });
-        link.addEventListener('mouseleave', () => {
-            cursor.classList.remove('hovered');
-        });
-    });
+    }
 
   // Initialize Smooth Scroll
   const lenis = new Lenis({
@@ -50,6 +52,38 @@
     requestAnimationFrame(raf);
   }
   requestAnimationFrame(raf);
+
+  function fitTitles() {
+        const titles = document.querySelectorAll('h1');
+        titles.forEach(title => {
+            // 1. Get the character count (including spaces)
+            const charCount = title.innerText.length;
+            
+            // 2. Set it as a CSS variable named "--char-count"
+            title.style.setProperty('--char-count', charCount);
+        });
+    }
+
+    // Run on load and on resize (in case you change content dynamically)
+    fitTitles();
+    window.addEventListener('resize', fitTitles);
+
+// FIX: Close menu when clicking the glass background
+    const menuOverlay = document.getElementById('menu');
+
+    if (menuOverlay) {
+        menuOverlay.addEventListener('click', function(e) {
+            // "e.target" is what you actually clicked.
+            // "this" is the menu container (the glass).
+            
+            // If you clicked the glass (and not a link text inside it)...
+            if (e.target === this) {
+                // ...then hide the menu!
+                this.classList.add('hidden');
+            }
+        });
+    }
+
 </script>
   </body>
 </html>

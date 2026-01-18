@@ -9,7 +9,7 @@
   <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
   <link rel="icon" type="image/png" href="/images/favicon.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
-  <meta name="description" content="an archive of light in time" />
+  <meta name="description" content="archiving lights in time since 2024" />
   
   
     <meta name="robots" content="index, follow" />
@@ -18,13 +18,13 @@
   <meta property="og:url" content="http://localhost:1313/" />
   <meta property="og:site_name" content="Jungu Kang" />
   <meta property="og:title" content="photo.graphy" />
-  <meta property="og:description" content="an archive of light in time" />
+  <meta property="og:description" content="archiving lights in time since 2024" />
   <meta property="og:locale" content="en_us" />
   <meta property="og:type" content="website" />
 
 
   
-  <link rel="stylesheet" href="/css/main.min.45be4c9bc0cab34a3643c91ea7e9fc01c5d4ac8bd26c9d665f5352d572ee4c11.css" />
+  <link rel="stylesheet" href="/css/main.min.b11b1cf272d8d898d6114ceb4b7e23c6b52e7ca4c2e706f00e456b4fabe3f725.css" />
   
   
   <script src="/js/main.0de0d73fb334e8aef574046cb537325b517c7abcd818150338b9a53e8d3b8dc2.js" defer></script></head>
@@ -82,20 +82,20 @@
       </li>
     
       <li itemscope itemtype="http://www.schema.org/SiteNavigationElement">
-        <a aria-current="false" href="/gear" itemprop="url">
-          <span itemprop="name">Gear</span>
+        <a aria-current="false" href="/2026-1p1d" itemprop="url">
+          <span itemprop="name">2026</span>
+        </a>
+      </li>
+    
+      <li itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+        <a aria-current="false" href="/ucsc" itemprop="url">
+          <span itemprop="name">UCSC Events</span>
         </a>
       </li>
     
       <li itemscope itemtype="http://www.schema.org/SiteNavigationElement">
         <a aria-current="false" href="https://www.jungukang.com" itemprop="url">
-          <span itemprop="name">Back to Main</span>
-        </a>
-      </li>
-    
-      <li itemscope itemtype="http://www.schema.org/SiteNavigationElement">
-        <a aria-current="false" href="/ucsc/" itemprop="url">
-          <span itemprop="name">UCSC</span>
+          <span itemprop="name">Back to research</span>
         </a>
       </li>
     
@@ -109,7 +109,7 @@
   <hgroup>
     <h1>photo.graphy</h1>
     
-      <p>an archive of light in time</p>
+      <p>archiving lights in time since 2024</p>
     
   </hgroup>
 
@@ -133,7 +133,31 @@
           <h2>1p1d.bests.2025</h2>
           <p>
             
-              10 photos
+              9 photos
+            
+          </p>
+        </div>
+      </a>
+    </section>
+  
+
+  
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    <section class="featured">
+      <a class="featured-card" href="/2026-1p1d/" style="background-color: #54b3ce; background-image: url(/2026-1p1d/exif-1_hu_b14145eaff14644f.jpg)">
+        <div>
+          <h2>1p1d.2026</h2>
+          <p>
+            
+              1 photo
             
           </p>
         </div>
@@ -271,25 +295,27 @@
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script> 
 <script>
 
+
     const cursor = document.getElementById('cursor');
     
     
-    document.addEventListener('mousemove', (e) => {
-        
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
-    });
+    if (cursor) {
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
 
-    
-    const links = document.querySelectorAll('a, button, .gallery-item');
-    links.forEach(link => {
-        link.addEventListener('mouseenter', () => {
-            cursor.classList.add('hovered');
+        
+        const links = document.querySelectorAll('a, button, .gallery-item, .nav-pill');
+        links.forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                cursor.classList.add('hovered');
+            });
+            link.addEventListener('mouseleave', () => {
+                cursor.classList.remove('hovered');
+            });
         });
-        link.addEventListener('mouseleave', () => {
-            cursor.classList.remove('hovered');
-        });
-    });
+    }
 
   
   const lenis = new Lenis({
@@ -309,6 +335,38 @@
     requestAnimationFrame(raf);
   }
   requestAnimationFrame(raf);
+
+  function fitTitles() {
+        const titles = document.querySelectorAll('h1');
+        titles.forEach(title => {
+            
+            const charCount = title.innerText.length;
+            
+            
+            title.style.setProperty('--char-count', charCount);
+        });
+    }
+
+    
+    fitTitles();
+    window.addEventListener('resize', fitTitles);
+
+
+    const menuOverlay = document.getElementById('menu');
+
+    if (menuOverlay) {
+        menuOverlay.addEventListener('click', function(e) {
+            
+            
+            
+            
+            if (e.target === this) {
+                
+                this.classList.add('hidden');
+            }
+        });
+    }
+
 </script>
   </body>
 </html>

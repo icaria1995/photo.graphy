@@ -56,7 +56,7 @@
 
   <meta property="og:image" content="http://localhost:1313/ucsc/2025-elsi-kaiser/elsiKaiser_main_hu_d208d52393a6049e.jpg" />
   
-  <link rel="stylesheet" href="/css/main.min.45be4c9bc0cab34a3643c91ea7e9fc01c5d4ac8bd26c9d665f5352d572ee4c11.css" />
+  <link rel="stylesheet" href="/css/main.min.b11b1cf272d8d898d6114ceb4b7e23c6b52e7ca4c2e706f00e456b4fabe3f725.css" />
   
   
   <script src="/js/main.0de0d73fb334e8aef574046cb537325b517c7abcd818150338b9a53e8d3b8dc2.js" defer></script></head>
@@ -104,12 +104,6 @@
       </li>
     
       <li itemscope itemtype="http://www.schema.org/SiteNavigationElement">
-        <a aria-current="true" href="/ucsc/" itemprop="url">
-          <span itemprop="name">UCSC</span>
-        </a>
-      </li>
-    
-      <li itemscope itemtype="http://www.schema.org/SiteNavigationElement">
         <a aria-current="false" href="/2024-1p1d" itemprop="url">
           <span itemprop="name">2024</span>
         </a>
@@ -122,14 +116,20 @@
       </li>
     
       <li itemscope itemtype="http://www.schema.org/SiteNavigationElement">
-        <a aria-current="false" href="/gear" itemprop="url">
-          <span itemprop="name">Gear</span>
+        <a aria-current="false" href="/2026-1p1d" itemprop="url">
+          <span itemprop="name">2026</span>
+        </a>
+      </li>
+    
+      <li itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+        <a aria-current="false" href="/ucsc" itemprop="url">
+          <span itemprop="name">UCSC Events</span>
         </a>
       </li>
     
       <li itemscope itemtype="http://www.schema.org/SiteNavigationElement">
         <a aria-current="false" href="https://www.jungukang.com" itemprop="url">
-          <span itemprop="name">Back to Main</span>
+          <span itemprop="name">Back to research</span>
         </a>
       </li>
     
@@ -452,24 +452,6 @@
     
       
 
-  <a class="card" href="/ucsc/2025-fall-welcome/" title="ucsc.fallWelcome.2025">
-    <figure style="background-color: #3b3c39">
-      <img class="lazyload" width="600" height="383" data-src="/ucsc/2025-fall-welcome/fallWelcome_Main_hu_1351e29ec7afc0c1.jpg" alt="ucsc.fallWelcome.2025" />
-    </figure>
-    <div>
-      <h2>ucsc.fallWelcome.2025</h2>
-      <p>
-        
-          11 photos
-        
-      </p>
-    </div>
-  </a>
-
-
-    
-      
-
   <a class="card" href="/ucsc/elena-visit/" title="ucsc.elena.2025">
     <figure style="background-color: #e3d8c5">
       <img class="lazyload" width="598" height="600" data-src="/ucsc/elena-visit/2025elena_08a_hu_24b2f2aa4f707d6f.jpg" alt="ucsc.elena.2025" />
@@ -488,15 +470,33 @@
     
       
 
-  <a class="card" href="/ucsc/2025-year-end-party-20250612/" title="ucsc.yearEnd.2025">
-    <figure style="background-color: #c2c5cb">
-      <img class="lazyload" width="480" height="600" data-src="/ucsc/2025-year-end-party-20250612/2025yearEnd_main_hu_d08449b7b0f67d1f.jpg" alt="ucsc.yearEnd.2025" />
+  <a class="card" href="/ucsc/2025-fall-welcome/" title="ucsc.fallWelcome.2025">
+    <figure style="background-color: #3b3c39">
+      <img class="lazyload" width="600" height="383" data-src="/ucsc/2025-fall-welcome/fallWelcome_Main_hu_1351e29ec7afc0c1.jpg" alt="ucsc.fallWelcome.2025" />
     </figure>
     <div>
-      <h2>ucsc.yearEnd.2025</h2>
+      <h2>ucsc.fallWelcome.2025</h2>
       <p>
         
-          9 photos
+          11 photos
+        
+      </p>
+    </div>
+  </a>
+
+
+    
+      
+
+  <a class="card" href="/ucsc/2025-lurc/" title="ucsc.lurc.2025">
+    <figure style="background-color: #3d3f31">
+      <img class="lazyload" width="600" height="480" data-src="/ucsc/2025-lurc/2025lurc_main_hu_d3f9cf35a7e5d50a.jpg" alt="ucsc.lurc.2025" />
+    </figure>
+    <div>
+      <h2>ucsc.lurc.2025</h2>
+      <p>
+        
+          25 photos
         
       </p>
     </div>
@@ -522,25 +522,27 @@
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script> 
 <script>
 
+
     const cursor = document.getElementById('cursor');
     
     
-    document.addEventListener('mousemove', (e) => {
-        
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
-    });
+    if (cursor) {
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
 
-    
-    const links = document.querySelectorAll('a, button, .gallery-item');
-    links.forEach(link => {
-        link.addEventListener('mouseenter', () => {
-            cursor.classList.add('hovered');
+        
+        const links = document.querySelectorAll('a, button, .gallery-item, .nav-pill');
+        links.forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                cursor.classList.add('hovered');
+            });
+            link.addEventListener('mouseleave', () => {
+                cursor.classList.remove('hovered');
+            });
         });
-        link.addEventListener('mouseleave', () => {
-            cursor.classList.remove('hovered');
-        });
-    });
+    }
 
   
   const lenis = new Lenis({
@@ -560,6 +562,38 @@
     requestAnimationFrame(raf);
   }
   requestAnimationFrame(raf);
+
+  function fitTitles() {
+        const titles = document.querySelectorAll('h1');
+        titles.forEach(title => {
+            
+            const charCount = title.innerText.length;
+            
+            
+            title.style.setProperty('--char-count', charCount);
+        });
+    }
+
+    
+    fitTitles();
+    window.addEventListener('resize', fitTitles);
+
+
+    const menuOverlay = document.getElementById('menu');
+
+    if (menuOverlay) {
+        menuOverlay.addEventListener('click', function(e) {
+            
+            
+            
+            
+            if (e.target === this) {
+                
+                this.classList.add('hidden');
+            }
+        });
+    }
+
 </script>
   </body>
 </html>

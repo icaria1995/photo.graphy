@@ -1,6 +1,7 @@
 ---
 title: "1p1d.bests.2025"
 date: 2026-01-17
+keywords: [1P1D, 2025, Selection]
 params:
   featured: true
   private: true # do not show in list, only as feature

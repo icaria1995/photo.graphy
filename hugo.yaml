@@ -17,12 +17,15 @@ menu:
       url: /2025-1p1d
       weight: 3
     # Added a "Gear" page (Very common for photographer portfolios)
-    - name: Gear
-      url: /gear
+    - name: 2026
+      url: /2026-1p1d
       weight: 4
-    - name: Back to Main
-      url: https://www.jungukang.com
+    - name: UCSC Events
+      url: /UCSC
       weight: 5
+    - name: Back to research
+      url: https://www.jungukang.com
+      weight: 999
 
 params:
   name: "Jungu Kang"
