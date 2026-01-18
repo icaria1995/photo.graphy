@@ -9,4 +9,8 @@ resources:
   - src: 2025SS_09a.jpg
     params:
       cover: true
+
+# THE FIX: Force it to behave like the homepage
+type: gallery 
+layout: masonry   # OR try: layout: "index" if masonry doesn't work
 ---
