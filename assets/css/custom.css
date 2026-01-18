@@ -1,0 +1,164 @@
+/* --- 1. FONTS (Always the same) --- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap');
+
+/* --- 2. GLOBAL FONTS --- */
+html, body {
+    font-family: 'Source Sans 3', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6, .logo {
+    font-family: 'Montserrat', sans-serif !important;
+    letter-spacing: -0.02em;
+}
+
+/* --- 3. DARK MODE (Academic Noir) --- */
+/* These colors apply ONLY when the computer asks for Dark Mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-background: #111;       /* Your deep black */
+        --color-text: #eee;             /* Soft white */
+        --color-primary: #eee;          /* Links */
+        --color-secondary: #aaa;        /* Captions */
+    }
+}
+
+/* --- 4. LIGHT MODE (Clean Paper) --- */
+/* These colors apply ONLY when the computer asks for Light Mode */
+@media (prefers-color-scheme: light) {
+    :root {
+        --color-background: #ffffff;    /* Pure white */
+        --color-text: #1f1f1f;          /* Dark grey text */
+        --color-primary: #111;          /* Black links */
+        --color-secondary: #555;        /* Grey captions */
+    }
+}
+
+/* --- 5. STYLISH MONTH HEADERS --- */
+/* This targets the Month headers inside the gallery content */
+.prose h2 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 3rem; /* Space above the month */
+    margin-bottom: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    color: var(--color-text);
+}
+
+/* The magic horizontal line */
+.prose h2::after {
+    content: '';
+    flex: 1;           /* Take up remaining space */
+    margin-left: 15px; /* Space between text and line */
+    height: 1px;       /* Thickness of line */
+    background-color: rgba(255,255,255,0.2); /* Subtle divider color */
+}
+
+/* --- 6. MANUAL GALLERY GRID --- */
+.gallery-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;       /* Forces uniform square-ish tiles */
+    object-fit: cover;   /* Crops image to fill the square */
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+/* --- 7. THE MUSEUM LAYOUT (Margins & Lines) --- */
+/* We target the main container */
+main {
+    /* Limit the width for readability */
+    max-width: 1400px; 
+    margin: 0 auto; /* Center the box */
+    
+    /* The Vertical Lines */
+    border-left: 2px solid rgba(255, 255, 255, 0.1);
+    border-right: 2px solid rgba(255, 255, 255, 0.1);
+    
+    /* Internal breathing room so photos don't touch the lines */
+    padding: 40px 60px; 
+    
+    /* Ensure lines stretch the full height even on short pages */
+    min-height: 100vh;
+}
+
+/* On Mobile, we remove the strict borders to use full screen */
+@media (max-width: 768px) {
+    main {
+        border: none;
+        padding: 20px;
+        max-width: 100%;
+    }
+}
+
+/* --- 8. SUPER GLUE STICKY HEADER --- */
+/* Target the element directly (header) AND the class (.header) */
+header, .header {
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0;
+    width: 100%;              /* Ensure it spans the full width */
+    z-index: 9999;            /* Force it above EVERYTHING */
+    
+    /* The Visuals */
+    background-color: rgba(17, 17, 17, 0.9) !important; /* Darker & clearer */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    
+    /* Fix for some themes where padding gets squished */
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* --- 10. CENTERED HEADER TITLE --- */
+/* First, ensure the header can act as an anchor */
+.header {
+    position: sticky; /* Keep your sticky setting */
+    display: flex;
+    justify-content: space-between; /* Pushes menu to the right */
+    align-items: center;
+    position: relative; /* Crucial for the centering trick */
+}
+
+/* Now, grab the logo/title and force it to the center */
+.header .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Shifts it back by half its own width */
+    
+    /* Ensure it sits nicely */
+    width: auto;
+    text-align: center;
+    white-space: nowrap;
+    z-index: 10; /* Keep it above background */
+}
+
+/* --- 11. FIXED DROPDOWN MENU --- */
+/* Target the menu container when it's open */
+.menu-container, #menu {
+    /* Force it to stick to the screen, not the page */
+    position: fixed !important; 
+    
+    /* Position it just below your sticky header */
+    top: 60px !important; /* Adjust this number to match your header height */
+    left: 0;
+    width: 100%;
+    
+    /* ensure it's visible */
+    z-index: 9998; 
+    background-color: rgba(17, 17, 17, 0.95); /* Match your sticky header color */
+    backdrop-filter: blur(12px);
+}

@@ -1,0 +1,31 @@
+baseURL: "https://photos.jungukang.win/"
+languageCode: "en-us"
+title: "Jungu Kang || photo.graphy"
+theme: "gallery"
+
+menu:
+  main:
+    - name: about
+      url: /about
+      weight: 1
+    - name: 1p1d.2024
+      url: /2024 1P1D
+      weight: 2
+    - name: 1p1d.2025
+      url: /2025 1P1D
+      weight: 3
+    - name: 1p1d.2026
+      url: /2025 1P1D
+      weight: 4
+    - name: back to research →
+      url: https://jungukang.win
+      weight: 5
+
+params:
+  author:
+    name: "Jungu Kang"
+    email: "jkang@ucsc.edu"
+  description: "One Photo One Day"
+  customCSS: ["css/custom.css"]
+  # Visual Settings
+  style: auto     # Adapts to system (Dark/Light)

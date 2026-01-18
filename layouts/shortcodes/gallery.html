@@ -1,0 +1,15 @@
+{{/* layouts/shortcodes/gallery.html */}}
+{{ $pattern := .Get "match" }}
+{{ $images := .Page.Resources.Match $pattern }}
+
+<div class="gallery-section">
+  {{ range $images }}
+    <div class="gallery-item">
+      {{/* We resize images to 800px width for speed */}}
+      {{ $thumb := .Resize "800x" }}
+      <a href="{{ .RelPermalink }}" target="_blank">
+        <img src="{{ $thumb.RelPermalink }}" alt="{{ .Name }}" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}">
+      </a>
+    </div>
+  {{ end }}
+</div>

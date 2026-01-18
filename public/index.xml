@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>photo.graphy on Jungu Kang || photo.graphy</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content in photo.graphy on Jungu Kang || photo.graphy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkang@ucsc.edu (Jungu Kang)</managingEditor>
+    <webMaster>jkang@ucsc.edu (Jungu Kang)</webMaster>
+    <lastBuildDate>Sat, 17 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1p1d.2024</title>
+      <link>http://localhost:1313/2024-1p1d/</link>
+      <pubDate>Sat, 17 Jan 2026 00:00:00 +0000</pubDate><author>jkang@ucsc.edu (Jungu Kang)</author>
+      <guid>http://localhost:1313/2024-1p1d/</guid>
+        <media:content url="http://localhost:1313/2024-1p1d/1p1d2024Cover_hu_835b79a5bc9fef2a.jpg" type="image/jpeg"/>
+        <description>
+          &lt;img src=&quot;http://localhost:1313/2024-1p1d/1p1d2024Cover_hu_835b79a5bc9fef2a.jpg&quot; /&gt;
+          &lt;p&gt;One Photo One Day: The first year&lt;/p&gt;
+        </description></item>
+    <item>
+      <title>1p1d.2025</title>
+      <link>http://localhost:1313/2025-1p1d/</link>
+      <pubDate>Sat, 17 Jan 2026 00:00:00 +0000</pubDate><author>jkang@ucsc.edu (Jungu Kang)</author>
+      <guid>http://localhost:1313/2025-1p1d/</guid>
+        <media:content url="http://localhost:1313/2025-1p1d/10-18_hu_2d0d98cbc3d8fdb9.jpg" type="image/jpeg"/>
+        <description>
+          &lt;img src=&quot;http://localhost:1313/2025-1p1d/10-18_hu_2d0d98cbc3d8fdb9.jpg&quot; /&gt;
+          &lt;p&gt;One Photo One Day in 2025. Second run!&lt;/p&gt;
+        </description></item>
+    <item>
+      <title>1p1d.bests.2024</title>
+      <link>http://localhost:1313/2024-1p1d-bests/</link>
+      <pubDate>Sat, 17 Jan 2026 00:00:00 +0000</pubDate><author>jkang@ucsc.edu (Jungu Kang)</author>
+      <guid>http://localhost:1313/2024-1p1d-bests/</guid>
+        <media:content url="http://localhost:1313/2024-1p1d-bests/2024Best_09_hu_c02552512c743c06.jpg" type="image/jpeg"/>
+        <description>
+          &lt;img src=&quot;http://localhost:1313/2024-1p1d-bests/2024Best_09_hu_c02552512c743c06.jpg&quot; /&gt;
+          &lt;p&gt;One Photo One Day 2024 selection&lt;/p&gt;
+        </description></item>
+    <item>
+      <title>about.me</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>jkang@ucsc.edu (Jungu Kang)</author>
+      <guid>http://localhost:1313/about/</guid><description>&lt;no value&gt;</description></item>
+  </channel>
+</rss>
