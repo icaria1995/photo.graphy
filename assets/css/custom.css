@@ -49,10 +49,11 @@ body::before {
    ========================================= */
 
 /* The "Museum" Headers (H2, H3) */
+
 h2, h3, .site-title, .navbar-item {
     font-family: var(--font-identity);
     letter-spacing: 0.24em;    /* W I D E */
-    font-weight: 400;
+    font-weight: 300;
 }
 
 /* The FLUID Main Title (H1) */
@@ -362,4 +363,15 @@ a[href="/"] {
     #site-title, .site-title, .navbar-brand {
         color: var(--text-color) !important;
     }
+}
+
+/* Target the H2 inside the specific Related Albums HGROUP */
+hgroup[style*="margin-top: 8rem"] h2 {
+    /* Reset typography to be more functional than the 'Museum' headers */
+    font-family: var(--font-identity) !important; /* Switch to Inter */
+    letter-spacing: 0.75em !important;        /* Narrower spacing */
+    text-transform: uppercase  !important;          /* No forced uppercase */
+    font-weight: 300 !important;              /* Medium-Bold */
+    font-size: 1.25rem !important;            /* Smaller than main headers */
+    opacity: 0.8;                             /* Slightly dimmed so it's secondary */
 }
