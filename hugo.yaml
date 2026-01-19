@@ -1,6 +1,7 @@
 baseURL: "https://photos.jungukang.com/"
 languageCode: "en-us"
 title: "Jungu Kang"
+meta_title: "Jungu Kang | surface.form"
 theme: "gallery"
 
 # "Pro" Navigation Structure
